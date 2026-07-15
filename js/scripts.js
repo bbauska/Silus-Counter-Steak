@@ -1,4 +1,4 @@
-/* /js/scripts.js in github Silus-Counter-2n making silus-counter.bauska-2m.org */
+/* /js/scripts.js in github Silus-Counter-Steak making silus-counter-steak.bauska.org */
 /* July 13, 2026 = ## (## hours approx)
  */
 let counter = 0;
