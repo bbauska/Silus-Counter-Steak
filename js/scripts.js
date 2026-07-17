@@ -1,8 +1,9 @@
 /* /js/scripts.js in github Silus-Counter-Steak making silus-counter-steak.bauska.org */
 /* July 13, 2026 = ## (## hours approx)
  */
-let counter = 20000;
+let counter = 20000+28000;
 /* 20,000 from July 15 (7 hours - 1 day), 
+   28,000 from July 16 (? hours - 1 day)
   all times are approximate. */
 
 function count() {
