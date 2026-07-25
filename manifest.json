@@ -1,7 +1,7 @@
 {
  "name": "Silus Says 'Steak' 2 Million Times",
   "short_name": "Silus Counter", 
-  "start_url": "Silus-Counter-Steak.bauska.org",
+  "start_url": "index.html",
   "display": "standalone", 
   "icons": [
   {
