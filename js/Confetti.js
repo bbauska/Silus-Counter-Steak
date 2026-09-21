@@ -1,8 +1,8 @@
 const confettiContainer = document.querySelector('#confetti-container');
 const showConfetti = () => {
   const confetti = document.createElement('div');
-  confetti.textContent = '🥩';
   confetti.classList.add('confetti');
+  confetti.textContent = '🥩';
   innerWidth = innerWidth * 0.5;
   confetti.style.left = Math.random() * innerWidth + 'px';
   confettiContainer.appendChild(confetti);
