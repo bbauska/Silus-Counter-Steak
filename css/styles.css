@@ -1,7 +1,9 @@
-/* styles.css in silus-counter-steak of silus-counter-steak.bauska.org */
+/* css/styles.css of silus-counter-steak for silus-counter-steak.bauska.org */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 body {
   display: flex;
-  justify-content: center;  /* center; */
+  justify-content: center;
   align-items: center;
 }
 .back {
@@ -10,19 +12,19 @@ body {
   align-items: center;
   flex-direction: column;
   width: 700px;  /* 300%; */
-  background-color: rgba(255, 0, 0, .7);  /* 65, 105, 224 .7 */
+  background-color: rgba(0, 0, 255, .7); /* vivid blue */
   border-radius: 30px;  /* 10px; */
-  box-shadow: 0 0 8px 0 rgb(3, 75, 85);
-  margin-top: 100px;  /* 100px */
+  box-shadow: 0 0 8px 0 rgb(3, 75, 85);  /* very dark cyan */
+  margin-top: 100px;
 }
   
 #clicker {
-  width: 200px;  /* 200px */
-  height: 50px;  /* 50px */
+  width: 200px;
+  height: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 8px 0 rgb(255, 255, 185);  /* 3, 75, 185 */
-  background-color: rgba(10, 4, 90, 0.6);
-  color: rgb(255, 255, 255);
+  box-shadow: 0 0 8px 0 rgb(255, 255, 185);  /* pale yellow */
+  background-color: rgba(10, 4, 90, 0.6);  /* very dark blue */
+  color: rgb(255, 255, 255);  /* white */
   margin-bottom: 50px; /* 100px */
   transition: 2s;
 }
@@ -32,24 +34,24 @@ body {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
-  font-size: 64px;  /* 64px; */
+  color: rgb(255, 255, 255);  /* white */
+  font-size: 64px;
   justify-content: center;
   letter-spacing: 0.1em;
 }
 h2 {
   font-size: 32px;
   justify-content: center;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);  /* white */
 }
 h3 {
   font-size: 26px;
   justify-content; center;
-  background-color: darkgreen;
-  color: rgb(200,200,200);
+  background-color: #006700;  /* dark green */
+  color: rgb(200,200,200);  /* light gray */
 }
 h4 {
-  color: darkgreen;
+  color: #006700;  /* dark green */
   font-size: 14px;
 }
 
@@ -61,23 +63,20 @@ h4 {
   100% {transform: scale(1);}
 }
 
-<!-- confetti-container & more -->
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-
 #confetti-container {
-  position: absolute;  /* absolute */
+  position: absolute;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;  /* 100vh; */
+  height: 100vh;
 }
 
 .card {
-  background-color: #fff;
+  background-color: #ffffff;  /* white */
   max-width: 700px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* black */
   padding: 2rem;
 }
 .card p {
@@ -101,7 +100,7 @@ h4 {
     transform: translateY(100vh) rotate(360deg);
   }
 }
-<!-- shadow/confetti -->
+/* shadow/confetti */
 button {
   margin-bottom: 10px;
   display: block;
@@ -109,5 +108,5 @@ button {
 canvas {
   width: 700px;  /* 500px; */
   height: 300px;
-  border: 1px solid blue;
+  border: 1px solid #0000ff;  /* pure blue */
 }
