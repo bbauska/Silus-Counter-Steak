@@ -1,6 +1,6 @@
 {
- "name": "Silus Says 'Steak' 2 Million Times",
-  "short_name": "Silus Counter", 
+  "name": "Silus Says 'Steak' 2 Million Times",
+  "short_name": "Silus Says 'Steak'", 
   "start_url": "index.html",
   "display": "standalone", 
   "icons": [
