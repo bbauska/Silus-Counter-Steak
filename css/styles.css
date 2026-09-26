@@ -108,5 +108,5 @@ button {
 canvas {
   width: 700px;  /* 500px; */
   height: 300px;
-  border: 1px solid #0000ff;  /* pure blue */
+  border: 1px solid #ff0000;  /* pure red */
 }
