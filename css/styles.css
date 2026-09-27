@@ -22,10 +22,10 @@ body {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  box-shadow: 0 0 8px 0 rgb(255, 255, 185);  /* pale yellow */
-  background-color: rgba(10, 4, 90, 0.6);  /* very dark blue */
-  color: rgb(255, 255, 255);  /* white */
-  margin-bottom: 50px; /* 100px */
+  box-shadow: 0 0 8px 0 rgb(255, 255, 185);
+  background-color: rgba(10, 4, 90, 0.6);
+  color: rgb(255, 255, 255);
+  margin-bottom: 50px;
   transition: 2s;
 }
 #clicker:hover {
