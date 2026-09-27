@@ -1,16 +1,15 @@
+/* js/snowSteak.js */
+/* Not doing any polyfills, this is a one-off, added fun little extra. */
+/* Assumes window.requestAnimationFrame support, unprefixed CSS Transforms, */
+/* emoji support, and ES6 support */
 'use strict';
-
-/* 
- * js/snowSteak.js
- * Not doing any polyfills, this is a one-off, added fun little extra
- * Assumes window.requestAnimationFrame support, unprefixed CSS Transforms,
- * emoji support, and ES6 support
- */
 
 /* Each update cycle should remove this much life from a snowflake */
 const LIFE_PER_TICK = 1000 / 60;
+
 /* Number of snowflakes */
 const MAX_FLAKES = Math.min(75, screen.width / 1280 * 75);
+
 /* The array of snow particles to be animated. They are HTMLElements */
 const flakes = [];
 
