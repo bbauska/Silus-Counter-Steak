@@ -26,11 +26,11 @@ body {
   background-color: rgba(10, 4, 90, 0.6);
   color: rgb(255, 255, 255);
   margin-bottom: 50px;
-  transition: 2s;
+  transition: 2s ease;
 }
 #clicker:hover {
-  animation-name: grow;
-  animation-duration: 60s;
+  /* Scales the element to 1.2x its original size */
+  transform: scale(1.2); 
 }
 
 h1 {
