@@ -1,4 +1,7 @@
 /* css/styles.css of silus-counter-steak for silus-counter-steak.bauska.org */
+<!-- confetti-container & more -->
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 body {
   display: flex;
   justify-content: center;
@@ -60,9 +63,6 @@ h4 {
   75% {transform: scale(1.4);}
   100% {transform: scale(1);}
 }
-
-<!-- confetti-container & more -->
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 #confetti-container {
   position: absolute;
