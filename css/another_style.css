@@ -1,0 +1,26 @@
+#clicker {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 0 rgb(255, 255, 185);
+  background-color: rgba(10, 4, 90, 0.6);
+  color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+}
+
+#clicker:hover {
+  animation-name: grow;
+  animation-duration: 60s;
+  /* Keeps the element at its final size when the animation ends */
+  animation-fill-mode: forwards; 
+}
+
+/* You must define the keyframes for the animation to work */
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
