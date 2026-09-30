@@ -44,9 +44,9 @@ const cssString = `.snowfall-container {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   width: 100%;
-  z-index: 99999; }
+  z-index: 99999; }`;
 
-  .snowflake {
+  .snowflake `{
     pointer-events: none;
     color: #ddf;  /* very pale blue */
     display: block;
