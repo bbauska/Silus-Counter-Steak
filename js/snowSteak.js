@@ -1,8 +1,8 @@
+'use strict';
 /* js/snowSteak.js */
 /* Not doing any polyfills, this is a one-off, added fun little extra. */
 /* Assumes window.requestAnimationFrame support, unprefixed CSS Transforms, */
 /* emoji support, and ES6 support */
-'use strict';
 
 /* Each update cycle should remove this much life from a snowflake */
 const LIFE_PER_TICK = 1000 / 60;
@@ -44,9 +44,9 @@ const cssString = `.snowfall-container {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   width: 100%;
-  z-index: 99999; }`;
+  z-index: 99999; };
 
-  .snowflake `{
+  .snowflake {
     pointer-events: none;
     color: #ddf;  /* very pale blue */
     display: block;
