@@ -102,7 +102,7 @@ function updatePositions() {
     let curLife = parseFloat(flake.dataset.life);
     let dt = (origLife - curLife) / origLife;
     if (dt <= 1.0) {
-      /* Fetch this flake's personalized periodicity for x-axis movement fromt he array */
+      /* Fetch this flake's personalized periodicity for x-axis movement from the array */
       let p = period[parseInt(flake.dataset.periodFunction)];
       /* Calculate new x-position, relative to original starting x */
       let x = p(dt * 2 * Math.PI) + parseFloat(flake.dataset.origX);
