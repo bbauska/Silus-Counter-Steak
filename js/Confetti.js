@@ -1,4 +1,3 @@
-/* ./js/Confetti.js of Silus-Counter-Steak for silus-counter-steak.bauska.org */
 const confettiContainer = document.querySelector('#confetti-container');
 const showConfetti = () => {
   const confetti = document.createElement('div');
