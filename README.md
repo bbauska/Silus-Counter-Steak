@@ -1,4 +1,4 @@
-# Silus-counter
+# Silus-Counter-Steak
 Create click counter for Silus' YouTube channels; Silus Gaming World &amp; Silus Spider.
 
 Meet Steak, the YouTuber who's flipping the script on gaming content! With a unique blend 
