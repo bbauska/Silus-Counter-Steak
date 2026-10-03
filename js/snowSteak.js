@@ -1,8 +1,11 @@
 'use strict';
-/* js/snowSteak.js */
-/* Not doing any polyfills, this is a one-off, added fun little extra. */
-/* Assumes window.requestAnimationFrame support, unprefixed CSS Transforms, */
-/* emoji support, and ES6 support */
+
+/* 
+ * js/snowSteak.js
+ * Not doing any polyfills, this is a one-off, added fun little extra.
+ * Assumes window.requestAnimationFrame support, unprefixed CSS Transforms,
+ * emoji support, and ES6 support
+ */
 
 /* Each update cycle should remove this much life from a snowflake */
 const LIFE_PER_TICK = 1000 / 60;
@@ -25,7 +28,7 @@ const period = [
 ];
 
 /* Emojis to substitute for snowflakes, just for fun */
-const fun = ['❤️', '😻', '🥩', '🐔', '💘', '🎯','🔫','🎮','♠','👓','🎤'];
+const fun = ['❤️', '😻', '🥩', '🐔', '💘', '🎯', '🔫', '🎮', '♠', '👓', '🎤'];
 
 /* The CSS styles for the snowflakes and container */
 const cssString = `.snowfall-container {
@@ -133,17 +136,14 @@ function appendSnow() {
   let styles = document.createElement('style');
   styles.innerText = cssString;
   document.querySelector('head').appendChild(styles);
-
   /* Create the container for the snowflakes and add it to the document body */
   let field = document.createElement('div');
   field.classList.add('snowfall-container');
-
   /* Set aria-hidden and role=presentation so that screen readers don't read the emoji */
   field.setAttribute('aria-hidden', 'true');
   field.setAttribute('role', 'presentation');
   document.body.appendChild(field);
   let i = 0;
-
   /* Using an inner function and setTimeout to delay the initial snowfall */
   /* This makes it much less clumpy */
   const addFlake = () => {
