@@ -36,7 +36,7 @@ const cssString = `.snowfall-container {
   height: 100vh;
   left: 0;
   margin: 0;
-  padding: 25px;  /* 100px, 0px */
+  padding: 100px;  /* 100px, 0px */
   -webkit-perspective-origin: top center;
           perspective-origin: top center;
   -webkit-perspective: 150px;
