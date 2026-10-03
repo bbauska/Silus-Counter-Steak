@@ -1,24 +1,21 @@
 'use strict';
 
-/* 
- * js/snowSteak.js
- * Not doing any polyfills, this is a one-off, added fun little extra.
+/*
+ * ./js/snowSteak.js 
+ * Not doing any polyfills, this is a one-off, added fun little extra
  * Assumes window.requestAnimationFrame support, unprefixed CSS Transforms,
  * emoji support, and ES6 support
  */
 
 /* Each update cycle should remove this much life from a snowflake */
 const LIFE_PER_TICK = 1000 / 60;
-
 /* Number of snowflakes */
 const MAX_FLAKES = Math.min(75, screen.width / 1280 * 75);
-
 /* The array of snow particles to be animated. They are HTMLElements */
 const flakes = [];
 
 /* A variety of periodic movement functions for the x-axis to create a range of snow falling models */
-/* The initial multiplier determines how far it moves in vw units at most, from the original */
-/* x-axis position */
+/* The initial multiplier determines how far it moves in vw units at most, from the original x-axis position */
 const period = [
   n => 5 * (Math.sin(n)),
   n => 8 * (Math.cos(n)),
@@ -27,8 +24,10 @@ const period = [
   n => 5 * (Math.sin(0.75 * n) + Math.cos(0.25 * n) - 1)
 ];
 
-/* Emojis to substitute for snowflakes, just for fun */
-const fun = ['❤️', '😻', '🥩', '🐔', '💘', '🎯', '🔫', '🎮', '♠', '👓', '🎤'];
+/* 30 Emojis to substitute for snowflakes */
+const fun = ['❤️', '🌈', '⚡️', '💥', '✨', '💫', '👺', '🤑', '🐯', '🐹', '🐺', '😬', '🐵', '👹',
+             '🐶', '🐘', '🦉', '🐒', '🐱', '🐫', '🎂', '🍿', '☠️', '🤬', '🤓', '👌', '👨🏻‍💻', '🐷',
+             '❤️', '😻', '🥩', '🐔', '💘', '🎯', '🔫', '🎮', '♠', '👓', '🎤'];
 
 /* The CSS styles for the snowflakes and container */
 const cssString = `.snowfall-container {
@@ -36,22 +35,22 @@ const cssString = `.snowfall-container {
   height: 100vh;
   left: 0;
   margin: 0;
-  padding: 100px;  /* 100px, 0px */
+  padding: 100px;  /* 0 */
   -webkit-perspective-origin: top center;
-          perspective-origin: top center;
+    perspective-origin: top center;
   -webkit-perspective: 150px;
-          perspective: 150px;
+    perspective: 150px;
   pointer-events: none;
   position: fixed;
   top: 0;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+    transform-style: preserve-3d;
   width: 100%;
-  z-index: 99999; };
+  z-index: 99999; }
 
   .snowflake {
     pointer-events: none;
-    color: #ddf;  /* very pale blue */
+    color: #ddf;
     display: block;
     font-size: 24px;
     left: -12px;
@@ -59,7 +58,7 @@ const cssString = `.snowfall-container {
     position: absolute;
     top: -12px;
     -webkit-transform-origin: center;
-            transform-origin: center; }`;
+      transform-origin: center; }`;
 
 /* Add a DOMContentLoaded listener, or fire the function immediately if that already happened */
 function ready(fn) {
@@ -73,13 +72,13 @@ function ready(fn) {
 
 /* Reset a flake to newly randomized values */
 function resetFlake(flake) {
-  /* X-axis is in vw (viewport width) CSS units */
+  /* X-axis is in vw CSS units */
   let x = flake.dataset.origX = (Math.random() * 100);
-  /* Y-axis is in CSS vh (viewport height) units */
+  /* Y-axis is in CSS vh units */
   let y = flake.dataset.origY = 0;
 
-  /* Once and a while, have closer snowflakes */
-  /* Z-axis is in CSS px (pixel units) */
+  /* Once in awhile, have closer snowflakes */
+  /* Z-axis is in CSS px units */
   let z = flake.dataset.origZ = (Math.random() < 0.1) ? (Math.ceil(Math.random() * 100) + 25) : 0;
 
   let life = flake.dataset.life = (Math.ceil(Math.random() * 4000) + 6000); /* Milliseconds */
@@ -105,7 +104,7 @@ function updatePositions() {
     let curLife = parseFloat(flake.dataset.life);
     let dt = (origLife - curLife) / origLife;
     if (dt <= 1.0) {
-      /* Fetch this flake's personalized periodicity for x-axis movement from the array */
+      /* Fetch this flake's personalized periodicity for x-axis movement fromt he array */
       let p = period[parseInt(flake.dataset.periodFunction)];
       /* Calculate new x-position, relative to original starting x */
       let x = p(dt * 2 * Math.PI) + parseFloat(flake.dataset.origX);
@@ -116,7 +115,7 @@ function updatePositions() {
       /* Each update, change the CSS transformation */
       flake.style.transform = `translate3d(${x}vw, ${y}vh, ${z}px)`;
       if (dt >= 0.5) {
-        /* Start fading out flakes 1/2 down screen */
+        /* Start fading out flakes 1/2 way down screen */
         flake.style.opacity = (1.0 - ((dt - 0.5) * 2));
       }
         curLife -= LIFE_PER_TICK;
@@ -148,14 +147,13 @@ function appendSnow() {
   /* This makes it much less clumpy */
   const addFlake = () => {
     let flake = document.createElement('span');
-    flake.classList.add('snowflake');
-    flake.setAttribute('aria-hidden', 'true');
-    flake.setAttribute('role', 'presentation');
-    flake.innerText = '🥩';
-    resetFlake(flake);
-    flakes.push(flake);
-    field.appendChild(flake);
-
+      flake.classList.add('snowflake');
+      flake.setAttribute('aria-hidden', 'true');
+      flake.setAttribute('role', 'presentation');
+      flake.innerText = '🥩';
+      resetFlake(flake);
+      flakes.push(flake);
+      field.appendChild(flake);
     /* Recursive (delayed by timeout) call to add a flake until max reached */
     if (i++ <= MAX_FLAKES) {
       setTimeout(addFlake, Math.ceil(Math.random() * 300) + 100);
