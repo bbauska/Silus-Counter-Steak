@@ -1,7 +1,7 @@
 /* /js/scripts.js in github Silus-Counter-Steak making silus-counter-steak.bauska.org */
 /* July 13, 2026 = ## (## hours approx) */
 
-let counter = 20000+28000+32000+10000+12200+7300+8750+21750+60000+50000+11119+38881+46500+13700+39800+15100+7900+9000+2500;
+let counter = 20000+28000+32000+10000+12200+7300+8750+21750+60000+50000+11119+38881+46500+13700+39800+15100+7900+9000+2500+20600;
 
 /* 20,000 from July 15 (7 hours - 1 day), 
      28,000 from July 16 (? hours - 1 day)
@@ -22,6 +22,7 @@ let counter = 20000+28000+32000+10000+12200+7300+8750+21750+60000+50000+11119+38
      7,900 10/09/26 8-9:30pm running total = 423,000
      9,000 10/11/26 5-12am running total 432,000 
      2,500 10/16/2026 from 10:00pm-11:00pm 434,500
+    20,600 10/17/2026 from 10:00pm-1:00am 455,100
      all times are approximate. */
 
 function count() {
